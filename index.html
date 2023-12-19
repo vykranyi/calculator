@@ -3,63 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Calculator</title>
 
-    <style> 
-
-    .conteiner {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        height: 100vh;
-
-    }
-    .calculator {
-        display: grid;
-        align-items: center;
-        background: rgb(237, 237, 237);
-        justify-content: center;
-        padding: 20px;
-        border-radius: 5%;
-    }
-
-    input {
-        width: 268px;
-        height: 50px;
-        margin: 3px;
-    }
-
-    button {
-        width: 50px;
-        height: 50px;
-        margin: 3px;
-    }
-    .keys {
-        display: grid;
-        grid-template: auto / auto auto 
-    }
-    .numbers {
-        display: grid;
-        grid: auto / auto auto auto;
-        justify-content: right;
-    }
-    .operation {
-        display: grid;
-        grid: auto / auto auto;
-        justify-content: left;
-        justify-items: end;
-    }
-    .op_key:last-child {
-        grid-column: span 2;
-    }
-    label[for="calc"] {
-        font-size: 25pt;
-    }
-
-
-    </style>
 </head>
 <body>
+    <script src="app.js"></script>
+    
 <div class="conteiner">
     <div class="calculator"> 
         <div class="display">
@@ -69,36 +19,31 @@
         
         <div class="keys">
             <div class="numbers">
-                <button>7</button> 
-                <button>8</button>
-                <button>9</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>0</button>
-                <button>.</button>
+                <button data-value="7" class="num_key">7</button> 
+                <button data-value="8" class="num_key">8</button>
+                <button data-value="9" class="num_key">9</button>
+                <button data-value="4" class="num_key">4</button>
+                <button data-value="5" class="num_key">5</button>
+                <button data-value="6" class="num_key">6</button>
+                <button data-value="1" class="num_key">1</button>
+                <button data-value="2" class="num_key">2</button>
+                <button data-value="3" class="num_key">3</button>
+                <button data-value="0" class="num_key">0</button>
+                <button data-value="." class="num_key">.</button>
             </div>
 
             <div class="operation">
-                <button class="op_key" id="clear">CLR</button>
-                <button class="op_key" id="back">Back</button>
-                <button class="op_key" id="add">+</button>
-                <button class="op_key" id="subt">-</button>
-                <button class="op_key" id="mult">*</button>
-                <button class="op_key" id="divi">/</button>
-                <button class="op_key" id="equal">=</button>    
+                <button data-action="clear" class="op_key" id="clear">CLR</button>
+                <button data-action="back" class="op_key" id="back">Back</button>
+                <button data-value="+" class="num_key" id="add">+</button>
+                <button data-value="-" class="num_key" id="subt">-</button>
+                <button data-value="*" class="num_key" id="mult">*</button>
+                <button data-value="/" class="num_key" id="divi">/</button>
+                <button data-action="result" class="op_key" id="equal">=</button>    
             </div>
         </div>
     </div>
 </div>
 
-
-    <script>
-      
-    </script>
-    
 </body>
 </html>
